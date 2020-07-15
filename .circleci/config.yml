@@ -4,7 +4,7 @@ jobs:
     docker:
     - image: circleci/python:3.6.4
     steps:
-      - checkout     <-можно выкинуть
+      - checkout
       - run: sudo pip install jupyter_client
       - run: sudo pip install nbconvert
       - run: sudo pip install numpy
@@ -12,7 +12,7 @@ jobs:
       - run: sudo pip install sklearn
       - run: sudo python3 -m pip install ipykernel
       - run: sudo python3 -m ipykernel install --user
-      - run: jupyter-nbconvert --execute ./Notebook.ipynb
+      - run: jupyter-nbconvert --execute ./Index.ipynb
       - store_artifacts:
-          path: ./Notebook.html
-          destination: Notebook.html
+          path: ./Index.html
+          destination: Index.html
