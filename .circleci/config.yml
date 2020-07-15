@@ -12,7 +12,7 @@ jobs:
       - run: sudo pip install sklearn
       - run: sudo python3 -m pip install ipykernel
       - run: sudo python3 -m ipykernel install --user
-      - run: jupyter-nbconvert --execute ./Index.ipynb
+      - run: jupyter nbconvert --execute ./Index.ipynb --to html
       - store_artifacts:
           path: ./Index.html
-          destination: Index.html
+          destination: test-reports
