@@ -1,2 +1,6 @@
 numpy
 matplotlib
+jupyter_client
+nbconvert
+sklearn
+ipykernel
